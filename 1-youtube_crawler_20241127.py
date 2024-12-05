@@ -3,7 +3,7 @@ import pandas as pd
 import time
 
 # YouTube Data API 키 설정
-API_KEY = 'AIzaSyD3eUUuJ-ilIZazLq_y7B3hMlCFbSyk3PM'  # API 키는 실제 키로 교체하세요
+API_KEY = 'YOUTUBE_API'  # API 키는 실제 키로 교체하세요
 youtube = googleapiclient.discovery.build("youtube", "v3", developerKey=API_KEY)
 
 def execute_request(request, retries=5, delay=1):

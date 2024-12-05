@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 # 데이터 파일 경로
-file_path = '/Users/gyungmin/VS_PRJ/DH/k-heritage/cleaned_youtube_comments_with_stopwords.csv'
+file_path = 'cleaned_youtube_comments_with_stopwords.csv'
 
 # 데이터 읽기
 data = pd.read_csv(file_path)
@@ -34,6 +34,6 @@ print("상위 키워드:")
 print(keyword_scores)
 
 # 결과 저장
-output_path = '/Users/gyungmin/VS_PRJ/DH/k-heritage/extracted_keywords.csv'
+output_path = 'extracted_keywords.csv'
 keyword_scores.to_csv(output_path, index=False)
 print(f"키워드 추출 결과 저장 완료: {output_path}")

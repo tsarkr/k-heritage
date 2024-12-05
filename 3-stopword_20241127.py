@@ -40,7 +40,7 @@ data = pd.read_csv(file_path)
 data['cleaned_comment'] = data['comment'].apply(clean_text)
 
 # 정제된 데이터 저장 (CSV 및 Excel 파일)
-csv_path = '/Users/gyungmin/VS_PRJ/DH/k-heritage/cleaned_youtube_comments_with_stopwords.csv'
+csv_path = 'cleaned_youtube_comments_with_stopwords.csv'
 
 # 저장
 data.to_csv(csv_path, index=False)

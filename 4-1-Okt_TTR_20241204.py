@@ -2,7 +2,7 @@ from konlpy.tag import Okt
 import pandas as pd
 
 # 파일 경로
-file_path = '/Users/gyungmin/VS_PRJ/DH/k-heritage/cleaned_youtube_comments_with_stopwords.csv'
+file_path = 'cleaned_youtube_comments_with_stopwords.csv'
 
 # 데이터 읽기
 data = pd.read_csv(file_path)

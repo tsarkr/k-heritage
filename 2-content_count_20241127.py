@@ -1,7 +1,7 @@
 import pandas as pd
 
 # 파일 경로 설정
-file_path = '/Users/gyungmin/VS_PRJ/DH/k-heritage/youtube_comments.csv'
+file_path = 'youtube_comments.csv'
 
 try:
     # 데이터 읽어오기

@@ -3,7 +3,7 @@ from konlpy.tag import Okt
 from collections import Counter
 
 # 파일 경로
-file_path = '/Users/gyungmin/VS_PRJ/DH/k-heritage/cleaned_youtube_comments_with_stopwords.csv'
+file_path = 'cleaned_youtube_comments_with_stopwords.csv'
 
 # 데이터 읽기
 data = pd.read_csv(file_path)
@@ -53,8 +53,8 @@ print("\n상위 동사/형용사 키워드:")
 print(verbs_adjectives_df)
 
 # 결과 저장
-nouns_output_path = '/Users/gyungmin/VS_PRJ/DH/k-heritage/extracted_nouns_konlpy.csv'
-verbs_adjectives_output_path = '/Users/gyungmin/VS_PRJ/DH/k-heritage/extracted_verbs_adjectives_konlpy.csv'
+nouns_output_path = 'extracted_nouns_konlpy.csv'
+verbs_adjectives_output_path = 'extracted_verbs_adjectives_konlpy.csv'
 
 nouns_df.to_csv(nouns_output_path, index=False)
 verbs_adjectives_df.to_csv(verbs_adjectives_output_path, index=False)

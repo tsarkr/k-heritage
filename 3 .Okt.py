@@ -85,14 +85,14 @@ def clean_text_with_okt(text, remove_num_eng=True, min_token_len=2):
     return ' '.join(filtered)
 
 # (3) CSV 불러오기
-file_path = '/Users/gyungmin/VS_PRJ/DH/k-heritage/filtered_comments.csv'
+file_path = 'filtered_comments.csv'
 data = pd.read_csv(file_path)
 
 # (4) 전처리 적용
 data['cleaned_comment'] = data['comment'].apply(clean_text_with_okt)
 
 # (5) 저장
-csv_path = '/Users/gyungmin/VS_PRJ/DH/k-heritage/cleaned_youtube_comments_with_stopwords.csv'
+csv_path = 'cleaned_youtube_comments_with_stopwords.csv'
 data.to_csv(csv_path, index=False)
 
 print(f"CSV 저장 완료: {csv_path}")

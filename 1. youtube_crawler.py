@@ -3,7 +3,7 @@ import pandas as pd
 import time
 
 # YouTube Data API 키 설정
-API_KEY = 'AIzaSyD3eUUuJ-ilIZazLq_y7B3hMlCFbSyk3PM'  # API 키는 실제 키로 교체하세요
+API_KEY = '*********************************'  # API 키는 실제 키로 교체하세요
 youtube = googleapiclient.discovery.build("youtube", "v3", developerKey=API_KEY)
 
 def execute_request(request, retries=5, delay=1):
@@ -123,6 +123,6 @@ comments_data = collect_channel_comments(channel_id)
 
 # 결과를 데이터프레임으로 변환하여 CSV로 저장
 df = pd.DataFrame(comments_data)
-df.to_csv("/Users/gyungmin/VS_PRJ/DH/k-heritage/youtube_comments.csv", index=False)
-df.to_excel("/Users/gyungmin/VS_PRJ/DH/k-heritage/youtube_comments.xlsx", index=False)
+df.to_csv("youtube_comments.csv", index=False)
+df.to_excel("youtube_comments.xlsx", index=False)
 print(f"댓글 수집 완료! 총 {len(comments_data)}개의 댓글을 가져왔습니다.")

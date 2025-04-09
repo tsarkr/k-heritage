@@ -24,8 +24,7 @@ for comment in comments:
     # 품사 태깅
     tagged_words = okt.pos(comment)
     # 동사와 형용사 추출
-    #verbs_adjectives.extend([word for word, tag in tagged_words if tag in ('Verb', 'Adjective')])
-    verbs_adjectives.extend([word for word, tag in tagged_words if tag in ('Adjective')])
+    verbs_adjectives.extend([word for word, tag in tagged_words if tag in ('Verb', 'Adjective')])
 
 # 불용어 제거 (명사 및 동사/형용사 모두 적용)
 stopwords = set(["수", "것", "들", "이", "저", "있", "의", "되", "해", "을", "를", "은", "는", "가", "에", "와", "한", "하다"])

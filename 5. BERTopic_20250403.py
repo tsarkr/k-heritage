@@ -18,7 +18,7 @@ class KMeansWrapper:
 
 def main():
     # 파일 경로
-    file_path = '/Users/gyungmin/VS_PRJ/DH/k-heritage/cleaned_youtube_comments_with_stopwords.csv'
+    file_path = 'cleaned_youtube_comments_with_stopwords.csv'
     
     # 데이터 읽기
     data = pd.read_csv(file_path)
@@ -57,7 +57,7 @@ def main():
         print(f"토픽 {row['Topic']}: {row['Name']}")
 
     # (6) 토픽 정보 저장
-    topic_info_path = '/Users/gyungmin/VS_PRJ/DH/k-heritage/bertopic_topic_info.csv'
+    topic_info_path = 'bertopic_topic_info.csv'
     topic_info.to_csv(topic_info_path, index=False)
     print(f"\n토픽 정보 저장 완료: {topic_info_path}")
 
@@ -66,7 +66,7 @@ def main():
         "Comment": comments,
         "Topic": topics
     })
-    comments_topics_path = '/Users/gyungmin/VS_PRJ/DH/k-heritage/comments_with_topics.csv'
+    comments_topics_path = 'comments_with_topics.csv'
     comments_with_topics.to_csv(comments_topics_path, index=False)
     print(f"\n댓글별 주요 토픽 저장 완료: {comments_topics_path}")
 
@@ -74,7 +74,7 @@ def main():
     try:
         top_10_topics = topic_info.head(10)['Topic'].tolist()
         custom_visualization = topic_model.visualize_topics(topics=top_10_topics)
-        visualization_path = '/Users/gyungmin/VS_PRJ/DH/k-heritage/bertopic_visualization.html'
+        visualization_path = 'bertopic_visualization.html'
         custom_visualization.write_html(visualization_path)
         print(f"\n토픽 시각화 저장 완료: {visualization_path}")
     except Exception as e:

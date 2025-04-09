@@ -24,7 +24,7 @@ try:
     print(content_comment_counts)
     
     # 결과를 CSV 파일로 저장
-    output_path = '/Users/gyungmin/VS_PRJ/DH/k-heritage/content_comment_counts.csv'
+    output_path = 'content_comment_counts.csv'
     content_comment_counts.to_csv(output_path, index=False)
     print(f"\n콘텐츠별 댓글 수를 저장한 파일 경로: {output_path}")
     

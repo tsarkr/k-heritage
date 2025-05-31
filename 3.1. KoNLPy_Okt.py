@@ -27,7 +27,7 @@ for comment in comments:
     verbs_adjectives.extend([word for word, tag in tagged_words if tag in ('Verb', 'Adjective')])
 
 # 불용어 제거 (명사 및 동사/형용사 모두 적용)
-stopwords = set(["수", "것", "들", "이", "저", "있", "의", "되", "해", "을", "를", "은", "는", "가", "에", "와", "한", "하다"])
+stopwords = set(["수", "것", "들", "저", "있", "되", "해", "한"])
 nouns = [noun for noun in nouns if noun not in stopwords and len(noun) > 1]
 verbs_adjectives = [word for word in verbs_adjectives if word not in stopwords and len(word) > 1]
 

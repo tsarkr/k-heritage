@@ -27,7 +27,7 @@ for comment in comments:
     adjectives.extend([word for word, tag in tagged_words if tag in ('Adjective')])
 
 # 불용어 제거 (명사 및 동사/형용사 모두 적용)
-stopwords = set(["수", "것", "들", "저", "있", "되", "해", "한"])
+stopwords = set(["수", "것", "들", "저", "있", "되", "해", "한", "되어다"])
 nouns = [noun for noun in nouns if noun not in stopwords and len(noun) > 1]
 adjectives = [word for word in adjectives if word not in stopwords and len(word) > 1]
 
@@ -53,10 +53,10 @@ print(adjectives)
 
 # 결과 저장
 nouns_output_path = 'extracted_nouns_konlpy.csv'
-verbs_adjectives_output_path = 'extracted_adjectives_konlpy.csv'
+adjectives_output_path = 'extracted_adjectives_konlpy.csv'
 
 nouns_df.to_csv(nouns_output_path, index=False)
-adjectives.to_csv(verbs_adjectives_output_path, index=False)
+adjectives.to_csv(adjectives_output_path, index=False)
 
 print(f"명사 키워드 추출 결과 저장 완료: {nouns_output_path}")
-print(f"동사/형용사 키워드 추출 결과 저장 완료: {verbs_adjectives_output_path}")
+print(f"형용사 키워드 추출 결과 저장 완료: {adjectives_output_path}")
